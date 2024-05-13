@@ -8,7 +8,7 @@ const RepoList = ({ nomeUsuario }) => {
 
   useEffect(() => {
     setCarregando(true);
-    fetch(`https://api.github.com/users/${nomeUsuario};repos`)
+    fetch(`https://api.github.com/users/${nomeUsuario}/repos`)
       .then((response) => response.json())
       .then((responseJson) => {
         setTimeout(() => {
